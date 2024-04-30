@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --primary-font: "Figtree", sans-serif;
+  --background-color: hsl(47, 88%, 63%);
+  --background-card: hsl(0, 0%, 100%);
+  --color-headings: hsl(0, 0%, 7%);
+  --color-paragraph: hsl(0, 0%, 50%);
+}
+
+/* General Style Start*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--background-color);
+  min-height: 100vh;
+  font-family: var(--primary-font);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+/* General Style End */
+
+/* ------------ */
+
+/* Card Style */
+
+.card {
+  width: 38.4rem;
+  background-color: var(--background-card);
+  padding: 2.4rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.card:hover h1 {
+  color: var(--background-color);
+}
+
+.card-img-box {
+  margin-bottom: 2.4rem;
+}
+
+.card-img-box img {
+  border-radius: 1rem;
+}
+.card-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.card-tag {
+  width: 8.2rem;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: var(--background-color);
+}
+
+.card-tag p {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 150%;
+}
+
+.card-date p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.card-title h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 150%;
+}
+
+.card-paragraph p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--color-paragraph);
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.card-author img {
+  width: 3.2rem;
+}
+
+.card-author p {
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 150%;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 32.7rem;
+  }
+}
